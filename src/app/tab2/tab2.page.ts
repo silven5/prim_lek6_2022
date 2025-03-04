@@ -1,4 +1,10 @@
+
+
 import { Component } from '@angular/core';
+import { ChangeDetectionStrategy } from "@angular/core";
+import { ModalController, NavParams, NavController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +13,6 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor() { }
 
 }

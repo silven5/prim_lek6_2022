@@ -1,21 +1,20 @@
 import { Engine } from "./engine";
-export class Car_set
-{
+export class Car_set {
     model: string;
     private engine: Engine;
-       constructor(model) {
+    constructor(model) {
         this.model = model;
+        // ! ЦЕ ПОГАНО!!!!   
         this.engine = null;
     }
-    get Engine()
-    {
+    get Engine() {
         return this.engine;
     }
-     set Engine(val) {
-       if (val instanceof Engine) {
-           this.engine = val;
-       } else {
-           throw new Error(`${val} should be instance of Engine`);
-       }
-   }
+    set Engine(val) {
+        if (val instanceof Engine) {
+            this.engine = val;
+        } else {
+            throw new Error(`${val} should be instance of Engine`);
+        }
+    }
 }

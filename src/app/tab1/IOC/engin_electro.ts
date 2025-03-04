@@ -3,14 +3,14 @@ import { IEngine } from './iengine';
 //Декоратор для позначення класу для ін'єкції залежностей
 @Injectable()
 //Газовий двигун
-export class Engine_gas implements IEngine {
+export class Engine_electro implements IEngine {
   private name: string;
   private currentPower: number;
   private maxPower: number;
   constructor() {
-    this.name = 'Двигун';
+    this.name = 'Електродвигун';
     this.currentPower = 0;
-    this.maxPower = 30;
+    this.maxPower = 60;
   }
   get Power() {
     return this.currentPower;
@@ -31,6 +31,6 @@ export class Engine_gas implements IEngine {
     return this.name;
   }
   get Name_pal() {
-    return 'газ';
+    return 'електроенергія';
   }
 }

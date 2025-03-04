@@ -1,22 +1,19 @@
 import { ICar } from './icar';
-import { IEngine } from "./IEngine";
-export class Car_IOC implements ICar
-{
+import { IEngine } from './iengine'
+export class Car_IOC implements ICar {
     private model: string;
-   private engine: IEngine;
-   constructor(model: string) {
-       this.model = model;
-   }
-
-   public setEngine(val: IEngine): void {
-       this.engine = val;
+    private engine: IEngine;
+    constructor(model: string) {
+        this.model = model;
     }
-    get Engine()
-    {
+
+    public setEngine(val: IEngine): void {
+        this.engine = val;
+    }
+    get Engine() {
         return this.engine;
     }
-    get Model()
-        {
+    get Model() {
         return this.model;
-        }
+    }
 }
